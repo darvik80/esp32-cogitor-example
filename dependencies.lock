@@ -1,0 +1,116 @@
+dependencies:
+  cogitor_iot:
+    component_hash: 9fd7cf1fde083f073ccff2bbb9a4de7a17db085482a332b7b850823d7a0812f4
+    dependencies:
+    - name: idf
+      version: '>=5.5'
+    - name: espressif/cjson
+      version: ^1.7.19
+    source:
+      git: https://github.com/darvik80/embed-framework.git
+      path: components/cogitor_iot
+      type: git
+    version: 17fc2e6c6801a057916dcb804ddef8ca5cde6420
+  embed:
+    component_hash: 74b4e08507f4e9ca6f87015dc2620c4aeee4f1949249f51492e1a6d92c3e4c6d
+    dependencies:
+    - name: idf
+      version: '>=5.5'
+    source:
+      git: https://github.com/darvik80/embed-framework.git
+      path: components/embed
+      type: git
+    version: 17fc2e6c6801a057916dcb804ddef8ca5cde6420
+  embed_core:
+    component_hash: ed3198eed621b8f557d821e007d01d368649e40c0a7a54b367d401078b906922
+    dependencies:
+    - name: idf
+      version: '>=5.5'
+    - name: espressif/mqtt
+      version: '*'
+    source:
+      git: https://github.com/darvik80/embed-framework.git
+      path: components/embed_core
+      type: git
+    version: 17fc2e6c6801a057916dcb804ddef8ca5cde6420
+  embed_extra:
+    component_hash: 1c45569f7c9cb393becdaad1f0f2d9f59828eae9fa3fe0e6b4154e6f21c8882b
+    dependencies:
+    - name: idf
+      version: '>=5.5'
+    - name: espressif/esp32-camera
+      version: ^2.1.6
+    - name: espressif/led_strip
+      version: ^3.0.0
+    source:
+      git: https://github.com/darvik80/embed-framework.git
+      path: components/embed_extra
+      type: git
+    version: 17fc2e6c6801a057916dcb804ddef8ca5cde6420
+  espressif/cjson:
+    component_hash: e788323270d90738662d66fffa910bfe1fba019bba087f01557e70c40485b469
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.7.19~2
+  espressif/esp32-camera:
+    component_hash: d1770097ec47996a9aba49b8d99672863c9855ea2d47e91fe31e11e58e8c7813
+    dependencies:
+    - name: espressif/esp_jpeg
+      registry_url: https://components.espressif.com
+      require: public
+      version: ^1.3.1
+    - name: idf
+      require: private
+      version: '>=5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.1.8
+  espressif/esp_jpeg:
+    component_hash: defb83669293cbf86d0fa86b475ba5517aceed04ed70db435388c151ab37b5d7
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.3.1
+  espressif/led_strip:
+    component_hash: 28621486f77229aaf81c71f5e15d6fbf36c2949cf11094e07090593e659e7639
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 3.0.3
+  espressif/mqtt:
+    component_hash: fb18bc3b65aa8c94693a9811ffc322cca8a65d92d5ec84983d3e385080e3969c
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.1.0
+  idf:
+    source:
+      type: idf
+    version: 5.5.1
+direct_dependencies:
+- cogitor_iot
+- embed
+- embed_core
+- embed_extra
+- idf
+manifest_hash: fe40b5c46a2eb48a1546ccf5eff0b56776b49458e4815583c479436edbe11e06
+target: esp32s3
+version: 2.0.0

@@ -1,0 +1,18 @@
+dependencies:
+  idf: ">=5.5"
+  embed:
+    git: https://github.com/darvik80/embed-framework.git
+    path: components/embed
+    version: master
+  embed_core:
+    git: https://github.com/darvik80/embed-framework.git
+    path: components/embed_core
+    version: master
+  embed_extra:
+    git: https://github.com/darvik80/embed-framework.git
+    path: components/embed_extra
+    version: master
+  cogitor_iot:
+    git: https://github.com/darvik80/embed-framework.git
+    path: components/cogitor_iot
+    version: master

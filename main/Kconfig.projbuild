@@ -1,0 +1,11 @@
+menu "Example — button"
+
+    config EXAMPLE_BUTTON_GPIO
+        int "Button GPIO"
+        default 0
+        range 0 48
+        help
+            Pressing the button sends a "button" event to the platform.
+            GPIO 0 is the BOOT button on most ESP32-S3 boards.
+
+endmenu
