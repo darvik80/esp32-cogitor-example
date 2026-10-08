@@ -29,5 +29,10 @@ CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
 CONFIG_PARTITION_TABLE_CUSTOM=y
 CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
 
+# Embed Framework runs its signals (MQTT messages, JSON, RPC handlers) on the
+# default event loop task; the stock 2304 bytes overflow on the first reply.
+CONFIG_ESP_SYSTEM_EVENT_TASK_STACK_SIZE=6144
 CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+# MetricsService needs it for cpuUsagePercent.
+CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS=y
 CONFIG_MBEDTLS_HARDWARE_SHA=n

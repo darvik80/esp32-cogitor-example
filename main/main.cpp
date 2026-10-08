@@ -66,6 +66,7 @@ extern "C" void app_main()
     registry.createService<embed::MetricsService>();             // heap, uptime, Wi-Fi RSSI every 10 s
     registry.createService<embed::MqttService>(*creds);          // connection and reconnects
     registry.createService<cogitor::iot::IotService>(*creds);    // platform topics, RPC dispatch
+    registry.createService<cogitor::iot::NtpService>();          // clock from the platform: telemetry is stamped with it
     registry.createService<cogitor::iot::MetricsTelemetryBridge>(); // metrics → telemetry
     registry.createService<cogitor::iot::DeviceInfo>();          // reported attributes on connect
     registry.createService<embed::LedStripService>();
